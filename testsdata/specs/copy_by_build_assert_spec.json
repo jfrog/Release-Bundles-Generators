@@ -1,0 +1,14 @@
+{
+  "files": [
+    {
+      "pattern": "${REPO1}/data/*",
+      "flat": "false",
+      "recursive": "true"
+    },
+    {
+      "pattern": "${REPO2}/data/*",
+      "flat": "false",
+      "recursive": "true"
+    }
+  ]
+}

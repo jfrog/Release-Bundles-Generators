@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "pattern": "${REPO1}/*",
+      "target": "out/",
+      "flat": "true",
+      "archiveEntries" : "*d1.in"
+    }
+  ]
+}

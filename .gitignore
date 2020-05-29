@@ -1,0 +1,23 @@
+# IDEs
+.idea
+.vscode
+*.iml
+
+# Test files
+testsdata/go/project1/go.sum
+testsdata/go/tmp
+tmp
+out
+
+# Pipdeptree
+artifactory/utils/pip/dependencies/deptreescript.go
+
+# JFrog executable
+release-bundle-generator
+
+# Vim
+*~
+*.swp
+
+# IOS
+*.DS_Store

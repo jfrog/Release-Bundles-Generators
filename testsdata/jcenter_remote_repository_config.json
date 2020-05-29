@@ -1,0 +1,6 @@
+{
+  "key": "${JCENTER_REMOTE_REPO}",
+  "rclass": "remote",
+  "packageType": "maven",
+  "url": "https://jcenter.bintray.com"
+}

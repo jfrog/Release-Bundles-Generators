@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "pattern": "${REPO1}/*/",
+      "target": "${REPO2}/",
+      "flat": "true",
+      "recursive": "true"
+    }
+  ]
+}
