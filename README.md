@@ -58,8 +58,8 @@ release-bundle-generator from-chart --chart-path=<chart path> --docker-repo=<Doc
 ```
 
 This has the following parameters:
-- The path (in Artifactory) of the Helm chart to generate. All dependency Helm
-  charts should be available in the same repository.
+- The path (in Artifactory) of the Helm chart from which to generate the release
+  bundle. All dependency Helm charts should be available in the same repository.
 - The name of a Docker repository in Artifactory. All dependency Docker images
   should be available in this repository.
 - The name and version that the new release bundle should have.
