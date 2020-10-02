@@ -4,6 +4,23 @@ This project is designed to simplify interaction with release bundles, by
 generating them from other formats. Currently, it can generate release bundles
 from Helm charts.
 
+This project is a [JFrog CLI](https://github.com/jfrog/jfrog-cli) plugin, and
+can be installed and run from within the JFrog CLI, or as a standalone
+executable:
+
+## Installation with JFrog CLI
+Installing the latest version:
+
+`$ jfrog plugin-install release-bundle-generator`
+
+Installing a specific version:
+
+`$ jfrog plugin-install release-bundle-generator@version`
+
+Uninstalling a plugin
+
+`$ jfrog plugin-uninstall release-bundle-generator`
+
 ## Downloading the Executable
 
 MacOS and Linux builds are available from Bintray,
@@ -20,41 +37,23 @@ MacOS and Linux builds are available from Bintray,
    ```
 4. Build the project by navigating to the `release-bundle-generators` folder and
    executing the build script:
-   - On Unix based systems, run:
-     ```
-     cd release-bundle-generators
-     ./build.sh
-     ```
-   - On Windows, run:
-     ```
-     cd release-bundle-generators
-     build.bat
-     ```
+   ```
+   cd release-bundle-generators
+   go build
+   ```
 
 ## Usage
-
-The release-bundle-generator can be configured in much the same way as
-[JFrog CLI](https://jfrog.com/getcli): you can configure an Artifactory instance
-with:
-
-``` shell
-release-bundle-generator c
-```
-
-and you can switch between configured instances with:
-
-``` shell
-release-bundle-generator use <server ID>
-```
-
-Alternatively, you can use the `--server-id=<server ID>` option to pass the
-configuration in directly, without setting it as default. Or, you can use the
-other optional arguments to pass options in without a configuration.
 
 To generate a release bundle from a chart, you can run:
 
 ``` shell
-release-bundle-generator from-chart --chart-path=<chart path> --docker-repo=<Docker repo name> <bundle name> <bundle version>
+jfrog from-chart --chart-path=<chart path> --docker-repo=<Docker repo name> <bundle name> <bundle version>
+```
+
+Or, if you're running it as a standalone executable:
+
+``` shell
+./release-bundle-generator from-chart --chart-path=<chart path> --docker-repo=<Docker repo name> <bundle name> <bundle version>
 ```
 
 This has the following parameters:
@@ -63,7 +62,7 @@ This has the following parameters:
 - The name of a Docker repository in Artifactory. All dependency Docker images
   should be available in this repository.
 - The name and version that the new release bundle should have.
-- All optional arguments can be checked by running `release-bundle-generator from-chart --help`
+- All optional arguments can be checked by running `jfrog from-chart --help`
 
 Note that if Helm or Docker dependencies are found in a remote repository, they
 must be cached. Otherwise, they won't show up in the release bundle. After
