@@ -1,3 +1,9 @@
+# DEPRECATION NOTICE
+
+This repo has been deprecated as the release bundle generator as migrated to a jfrog cli plugin.
+
+You can find the new repo at [JFrog CLI Plugins](https://github.com/jfrog/jfrog-cli-plugins/tree/main/rb-gen)
+
 # release-bundle-generator
 
 This project is designed to simplify interaction with release bundles, by
