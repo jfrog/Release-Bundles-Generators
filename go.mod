@@ -3,7 +3,7 @@ module github.com/jfrog/release-bundle-generator
 go 1.14
 
 require (
-	github.com/Masterminds/goutils v1.1.0 // indirect
+	github.com/Masterminds/goutils v1.1.1 // indirect
 	github.com/Masterminds/semver v1.5.0 // indirect
 	github.com/Masterminds/sprig v2.22.0+incompatible // indirect
 	github.com/cyphar/filepath-securejoin v0.2.2 // indirect
